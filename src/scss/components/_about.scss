@@ -1,0 +1,180 @@
+.about {
+  @include pxToRem(margin-bottom, 200px);
+  &__content {
+    display: flex;
+  }
+  &__section-left {
+    flex: 0 0 510px;
+    @include pxToRem(margin-right, 68px);
+    img {
+      @include widthRem(478);
+      @include hightRem(537);
+      @include pxToRem(border-radius, 60px);
+    }
+  }
+  &__section-right {
+    flex: 0 0 740px;
+  }
+  &__title-section-right {
+    @include pxToRem(max-width, 585px);
+    color: $title-text-color;
+    @include fontSize(45, 68);
+    font-weight: 500;
+    @include pxToRem(margin-bottom, 35px);
+  }
+  &__card-section-right {
+    display: flex;
+    align-items: center;
+    @include pxToRem(margin-bottom, 60px);
+  }
+  &__card-image {
+    background: #ff794e url('../img/about/about_small_img.png') -15px -50px no-repeat;
+    @include widthRem(134);
+    @include hightRem(134);
+    border-radius: 50%;
+    // @include pxToRem(border-radius, 71px);
+    @include pxToRem(margin-right, 33px);
+  }
+  &__subtitle-section-right {
+    h3 {
+      color: rgba(15, 31, 28, 0.5);
+      @include fontSize(22, 33);
+      font-weight: 500;
+      @include pxToRem(max-width, 491px);
+      @include pxToRem(margin-bottom, 30px);
+    }
+  }
+}
+
+.card__text h4 {
+  color: $title-text-color;
+  @include fontSize(33, 50);
+  font-weight: 500;
+}
+
+.card__text p {
+  color: rgba(15, 31, 28, 0.5);
+  @include fontSize(25, 38);
+  font-weight: 500;
+}
+
+.about__star img:not(:last-child) {
+  margin-right: 8px;
+}
+
+@media (max-width: 1024px) {
+  .about__section-left {
+    @include pxToRem(margin-right, 30px);
+  }
+  .about__title-section-right {
+    @include pxToRem(max-width, 485px);
+  }
+  .about__subtitle-section-right {
+    h3 {
+      @include pxToRem(max-width, 475px);
+    }
+  }
+  .about__card-section-right {
+    @include pxToRem(margin-bottom, 40px);
+  }
+}
+
+@media (max-width: 768px) {
+  .about__section-left {
+    flex: 0 0 310px;
+    @include pxToRem(margin-right, 25px);
+    img {
+      @include widthRem(300);
+      @include hightRem(400);
+      @include pxToRem(border-radius, 60px);
+    }
+  }
+  .about__section-right {
+    flex: 0 0 460px;
+  }
+
+  .about__title-section-right {
+    @include pxToRem(max-width, 400px);
+    @include fontSize(35, 48);
+    @include pxToRem(margin-bottom, 15px);
+  }
+  .about__card-section-right {
+    display: flex;
+    align-items: center;
+    @include pxToRem(margin-bottom, 20px);
+  }
+  .about__card-image {
+    @include widthRem(124);
+    @include hightRem(124);
+  }
+  .about__subtitle-section-right {
+    h3 {
+      @include fontSize(20, 25);
+      @include pxToRem(max-width, 400px);
+      @include pxToRem(margin-bottom, 20px);
+    }
+  }
+  .card__text h4 {
+    @include fontSize(28, 40);
+  }
+
+  .card__text p {
+    @include fontSize(22, 33);
+  }
+}
+
+@media (max-width: 425px) {
+  .about__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .about__section-left {
+    flex: 0 0 100%;
+    @include pxToRem(margin-right, 0px);
+    @include pxToRem(margin-bottom, 20px);
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  .about__section-right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .about__title-section-right,
+  .about__subtitle-section-right {
+    margin-bottom: 25px;
+    text-align: center;
+  }
+  .about__card-section-right {
+    margin-left: 20px;
+    margin-bottom: 40px;
+  }
+  .about__card-image {
+    margin-right: 15px;
+  }
+  .about__card-image {
+    width: 120px;
+    height: 120px;
+  }
+  @media (max-width: 375px) {
+    .about__card-image {
+      background: #ff794e url('/img/about/about_small_img.png') -20px -50px no-repeat;
+    }
+  }
+  @media (max-width: 320px) {
+    .about__card-image {
+      width: 130px;
+      height: 125px;
+      background: #ff794e url('/img/about/about_small_img.png') -20px -50px no-repeat;
+    }
+    .about__subtitle-section-right {
+      width: 315px;
+    }
+  }
+}
